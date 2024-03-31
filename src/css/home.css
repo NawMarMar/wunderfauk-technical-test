@@ -86,7 +86,7 @@
   stroke: #ccc;
   stroke-dasharray: 1200;
   stroke-dashoffset: 1200;
-  animation: dash 9s linear forwards;
+  animation: dash 7s linear forwards;
   animation-delay: 2s;
 }
 
@@ -96,7 +96,7 @@
   stroke-dasharray: 1200;
   stroke-dashoffset: 1200;
   animation: dash1 0.5s linear forwards;
-  animation-delay: 10s;
+  animation-delay: 9.8s;
 }
 
 @keyframes dash {
@@ -152,11 +152,6 @@
   font-family: 'norwester';
 }
 
-.mv-animate-txt h1 {
-  top: 40%;
-  width: 40%;
-}
-
 .mv-animate-txt span {
   position: absolute;
   bottom: 20%;
@@ -170,7 +165,7 @@
   text-align: center;
   color: #666;
   letter-spacing: 1px;
-  
+
 }
 
 .mv-animate-txt h1 {
@@ -179,7 +174,11 @@
   color: #666;
   font-weight: bold;
   text-transform: uppercase;
-  width: 40%;
+}
+
+.mv-animate-txt h1 {
+  top: 40%;
+  width: 30%;
 }
 
 .mv-sub-txt h2 {
@@ -385,12 +384,12 @@
 
   .mv-sub-txt h2 {
     width: 90%;
-    font-size: 40px;
+    font-size: 52px;
   }
 
   .mv-animate-txt h1 {
-    font-size: 35px;
-    width: 90%;
+    font-size: 40px;
+    width: 80%;
   }
 
   .mv-animate-txt span {

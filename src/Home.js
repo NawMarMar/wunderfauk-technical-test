@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as THREE from 'three';
 import axios from 'axios';
 import './css/home.css';
@@ -89,9 +89,9 @@ const Home = () => {
           scene.add(light);
         
           // create a BoxGeometry
-          const boxWidth = 1;
-          const boxHeight = 1;
-          const boxDepth = 1;
+          // const boxWidth = 1;
+          // const boxHeight = 1;
+          // const boxDepth = 1;
           // const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
           const geometry = new THREE.BufferGeometry();
           const noOfPoints = 1000; //1500;
@@ -172,7 +172,7 @@ const Home = () => {
           <div className='mv'>
             <div className='mv-inn'>
             {isVisible && (
-              <div className='animate-center animate-circle' style={{ animationDelay: '10.5s' }}>
+              <div className='animate-center animate-circle' style={{ animationDelay: '10s' }}>
                 <svg className='fill fill-1'>
                   <path d="M190,0 a 190,190 0 0 1 0,380 a 190,190 0 0 1 0,-380"
                       stroke-width="1"
@@ -189,10 +189,10 @@ const Home = () => {
               {isVisible && (
                 <dvi className='mv-animate-txt'>
                   <h1 className="fade-down" style={{ animationDelay: '3s' }}>hi,</h1>
-                  <h1 className="fade-down" style={{ animationDelay: '4.5s' }}>We are an integrated creative agency</h1>
-                  <h1 className="fade-down" style={{ animationDelay: '6.5s' }}>since 2010</h1>
-                  <h1 className="fade-down" style={{ animationDelay: '8.5s' }}>transforming & growing with our clients</h1>
-                  <span className='fade-out' style={{ animationDelay: '10.5s' }}>hold spacebar to speed up</span>
+                  <h1 className="fade-down" style={{ animationDelay: '4s' }}>We are an integrated creative agency</h1>
+                  <h1 className="fade-down" style={{ animationDelay: '6s' }}>since 2010</h1>
+                  <h1 className="fade-down" style={{ animationDelay: '8s' }}>transforming & growing with our clients</h1>
+                  <span className='fade-out' style={{ animationDelay: '10s' }}>hold spacebar to speed up</span>
                 </dvi>
                 )}
                 {showAdditionalDiv && (
