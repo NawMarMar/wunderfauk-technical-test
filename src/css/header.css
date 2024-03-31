@@ -1,0 +1,327 @@
+.App-header {
+  background: transparent;
+  left: 0;
+  padding: 30px 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all .3s ease;
+}
+
+.App-link {
+  padding-left: 50px;
+  position: fixed;
+  z-index: 100;
+}
+
+.App-logo {
+  bottom: 0;
+  position: relative;
+  transition: bottom .2s;
+  max-width: 180px;
+}
+
+.menu-wrap {
+  position: fixed;
+  right: 65px;
+  z-index: 10000;
+}
+
+.menu-button {
+  cursor: pointer;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 1s;
+  width: 50px;
+  z-index: 1;
+}
+
+.menu-button span {
+  background: #fff;
+  height: 2px;
+  left: 25px;
+  position: absolute;
+  top: 20px;
+  transition: .5s;
+  width: 15px;
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform: translate(0px, 0px);
+}
+
+.menu-button:hover span:first-child {
+  left: 10px;
+  width: 30px;
+}
+
+.menu-button span:last-child {
+  left: 10px;
+  top: 30px;
+  width: 30px;
+}
+
+.menu-button.active span {
+  top: 25px;
+  left: 10px !important;
+  width: 30px !important;
+}
+
+.menu-button.active span:first-child {
+  transform: rotate(45deg);
+}
+
+.menu-button.active span:last-child {
+  transform: rotate(-45deg);
+}
+
+.menu-detail {
+  padding-left: 65px;
+  padding-right: 65px;
+  padding-top: 40px;
+  background-image: url(../../public/images/menu-bg.svg) !important;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: 65% !important;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.menu-open {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  background-color: #1c1b1d;
+  border-radius: 50%;
+  transition: all .3s ease;
+  transform: translate(100%, -80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-open.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0);
+}
+
+.menu-detail .about-ttl {
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 150px;
+}
+
+.menu-detail .about-txt {
+  color: #b3b3b3;
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 2.5;
+  margin: 0;
+}
+
+.menu-about {
+  line-height: 2em;
+  width: 49%;
+}
+
+.menu-about p:last-of-type {
+  padding-top: 40px;
+}
+
+.menu-list-wrap {
+  justify-content: space-between;
+}
+
+.menu-right {
+  width: 20%;
+}
+
+.menu-sns-list {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  justify-content: flex-end;
+}
+
+.menu-sns-list li a img {
+  display: block;
+  margin-right: 10px;
+  max-width: 30px;
+}
+
+.menu-sns-list li:last-child a img {
+  margin-right: 0;
+}
+
+.menu-txt-list li {
+  padding-bottom: 20px;
+}
+
+.menu-txt-list li:last-child {
+  padding-bottom: 0;
+}
+
+.menu-txt-list li a {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: .15em;
+  letter-spacing: 4.5px;
+  padding-bottom: 40px;
+  position: relative;
+  text-align: right;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s ease-out;
+
+}
+
+.menu-txt-list li a:hover {
+  left: -15px;
+}
+
+.menu-footer-inn {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.menu-footer-inn p {
+  color: #666;
+  font-size: 11px;
+
+}
+
+.fade-in-up.show {
+  animation: 1s ease 0s 1 normal none running fadeInUp;
+}
+
+.fade-in-right.show {
+  animation: 1s ease 0s 1 normal none running fadeInRight;
+}
+
+.fade-down {
+  animation: 1s ease 1s 1 normal none running fadeDown;
+  opacity: 0;
+}
+
+
+@keyframes fadeDown {
+  from {
+    opacity: 1;
+    margin-top: -10vw;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 0;
+    margin-top: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sticky {
+    height: 65px;
+  }
+
+  .App-link {
+    padding-left: 20px;
+    top: 20px;
+  }
+
+  .App-logo {
+    width: 130px;
+  }
+
+  .menu-wrap {
+    right: 20px;
+    top: 8px;
+  }
+
+  .menu-detail {
+    padding: 30px;
+  }
+
+  .menu-about {
+    display: none;
+  }
+
+  .menu-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .menu-sns-list {
+    width: 100%;
+    margin: 10vh 0 0;
+    justify-content: space-between;
+  }
+
+  .menu-txt-list {
+    width: 100%;
+    margin-top: 15vh;
+  }
+
+  .menu-txt-list li a {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .menu-footer-inn {
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}

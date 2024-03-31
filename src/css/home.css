@@ -1,0 +1,399 @@
+.mv {
+  position: fixed;
+  /* background-color: #1c1b1d; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loading-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #1c1b1d;
+  z-index: 99;
+}
+
+.loading-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background-color: #666;
+  animation: moveLine 2s linear 1;
+  z-index: 9;
+}
+
+.content {
+  font-size: 24px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+@keyframes moveLine {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-circle {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #666;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fill {
+  width: 380px;
+  height: 380px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #666; */
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fill path {
+  stroke-width: 5;
+  stroke: #ccc;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: dash 9s linear forwards;
+  animation-delay: 2s;
+}
+
+.fill.fill-1 path {
+  stroke-width: 1;
+  stroke: #ccc;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: dash1 0.5s linear forwards;
+  animation-delay: 10s;
+}
+
+@keyframes dash {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes dash1 {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+    visibility: hidden;
+  }
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#stars {
+  position: absolute !important;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mv-animate-txt h1,
+.mv-sub-txt h2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 50%;
+  z-index: -1;
+  overflow: hidden;
+  font-family: 'norwester';
+}
+
+.mv-animate-txt h1 {
+  top: 40%;
+  width: 40%;
+}
+
+.mv-animate-txt span {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 50%;
+  z-index: -1;
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+  letter-spacing: 1px;
+  
+}
+
+.mv-animate-txt h1 {
+  font-size: 50px;
+  text-align: center;
+  color: #666;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 40%;
+}
+
+.mv-sub-txt h2 {
+  font-size: 93px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  width: 50%;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.mv-sub-txt.visible h2 {
+  opacity: 1;
+}
+
+.text-animate span {
+  display: inline-block;
+  color: #fff;
+  opacity: 0;
+  transform: rotate(-180deg) translate(150px, 0);
+  animation: twister 0.5s forwards;
+}
+
+@keyframes twister {
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(0deg) translate(0);
+    opacity: 1;
+  }
+}
+
+#work-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  color: #8c8c8c;
+  text-align: center;
+  z-index: 1;
+  cursor: pointer;
+  width: 60px;
+  margin: 0 auto;
+}
+
+#work-down p {
+  position: relative;
+  font-size: 10px;
+}
+
+#work-down span {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+}
+
+.whatsapp-icon {
+  display: block;
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 80px;
+  right: 50px;
+  z-index: 1;
+}
+
+.works {
+  position: relative;
+  z-index: 9;
+  margin-top: 100vh;
+  background-color: #1c1b1d;
+}
+
+.works-flex {
+  justify-content: space-between;
+}
+
+.works-info {
+  width: 33.33%;
+}
+
+.works-info a {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.works-info a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 0;
+  opacity: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.works-info a:hover::before {
+  opacity: 1;
+}
+
+.works-description {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  opacity: 0;
+}
+
+.works-info a:hover .works-description {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.works-description h2 {
+  font-size: 22px;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  z-index: 3;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.works-description p {
+  font-size: 14px;
+  color: #676767;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.post-number {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .works-info {
+    width: 100%;
+  }
+
+  .works-info a::before {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .works-description {
+    opacity: 1;
+  }
+
+  .post-number {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translateY(-50%);
+    font-size: 14em;
+    color: rgba(255, 255, 255, 0.06);
+    font-weight: bold;
+    z-index: -1;
+  }
+
+  .works-description p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .whatsapp-icon {
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+  }
+
+  .works-info {
+    width: 100%;
+  }
+
+  .mv-sub-txt h2 {
+    width: 90%;
+    font-size: 40px;
+  }
+
+  .mv-animate-txt h1 {
+    font-size: 35px;
+    width: 90%;
+  }
+
+  .mv-animate-txt span {
+    bottom: 25%;
+  }
+}

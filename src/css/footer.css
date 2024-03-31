@@ -1,0 +1,26 @@
+.footer-wrap {
+  position: relative;
+}
+
+.footer-static {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  margin: 0 auto;
+  padding: 0 60px;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+.footer-static p {
+  color: #666;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-static {
+    display: none;
+  }
+}
